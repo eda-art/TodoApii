@@ -1,0 +1,192 @@
+.todo-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  background-color: #A8DADC /* Açık, yumuşak mavi ton */
+}
+ 
+/* Başlık stili */
+.title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+ 
+/* Kategori filtre butonları */
+.filter-buttons {
+  margin: 15px 0 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+ 
+.filter-buttons button {
+  background-color: #ddd;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+ 
+.filter-buttons button:hover {
+  background-color: #bbb;
+}
+ 
+.filter-buttons button.active {
+  background-color: #3498db;
+  color: white;
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.5);
+}
+ 
+/* Görev kartları grid */
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+ 
+/* Temel kart stilleri */
+.task-card {
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #2c3e50;
+}
+ 
+/* Arka plan renkleri */
+.task-card.bg-blue {
+  background-color:   #FADADD;
+  border-left: 6px solid #fac6dd;
+}
+ 
+.task-card.bg-green {
+  background-color: #e8fce8;
+  border-left: 6px solid #7cd8a2;
+}
+ 
+.task-card.bg-yellow {
+  background-color:#A8DADC;
+  border-left: 6px solid #568c9e;
+}
+ 
+.task-card.bg-red {
+  background-color:   #E6DAF7;
+  border-left: 6px solid #e388bb;
+}
+ 
+.task-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+ 
+.task-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+ 
+.task-desc {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 12px;
+}
+ 
+.task-date {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+ 
+.task-status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+ 
+.task-status.completed {
+  background-color: #d4edda;
+  color: #27ae60;
+}
+ 
+.task-status.pending {
+  background-color: #fdf2e9;
+  color: #e67e22;
+}
+ 
+.task-buttons {
+  display: flex;
+  gap: 10px;
+}
+ 
+/* Butonların ortak stilleri */
+.task-buttons button {
+  font-size: 18px;  /* ikon büyüklüğü */
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+ 
+/* Durum değiştir butonu: soft pastel mavi ton */
+.toggle-btn {
+  background-color: #b3cfed; /* Soft pastel mavi */
+  color: #36414d; /* Daha koyu mavi yazı */
+}
+ 
+.toggle-btn:hover {
+  background-color: #7ea9e0; /* Hoverda biraz koyulaşma */
+}
+ 
+/* Sil butonu: soft pastel pembe/kırmızı ton */
+.delete-btn {
+  background-color: #f7b5b5; /* Soft pembe */
+  color: #ce7272; /* Koyu kırmızı yazı */
+}
+ 
+.delete-btn:hover {
+  background-color: #e19292; /* Hoverda biraz koyulaşma */
+}
+ 
+.task-buttons button:hover {
+  opacity: 0.9;
+}
+ 
+.header-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #2c3e50;
+  display: inline-block;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  animation: fadeInSlide 0.8s ease-out;
+  text-align: center;
+}
+ 
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
